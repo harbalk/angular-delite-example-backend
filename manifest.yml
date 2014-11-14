@@ -1,0 +1,9 @@
+applications:
+- disk_quota: 1024M
+  host: nonews
+  name: nonews
+  command: node app.js
+  path: .
+  domain: stage1.ng.bluemix.net
+  instances: 1
+  memory: 128M
