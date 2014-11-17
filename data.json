@@ -1,32 +1,32 @@
 [
-  {
-    "title": "Dojo: The Definitive Guide",
-    "isbn": "0596516487",
-    "id": "book1",
-    "_id": "53a403a0f7d5e421008bd40e"
-  },
-  {
-    "title": "Dojo: Using Dojo JavaScript Library to Build Ajax Applications",
-    "isbn": "0132358042",
-    "id": "book2",
-    "_id": "53a403adf7d5e421008bd40f"
-  },
-  {
-    "title": "Practical Dojo Projects (Expert's Voice in Web Development)",
-    "isbn": "1430210664",
-    "id": "0.9461482693441212",
-    "_id": "546a11e714969c2000d004d7"
-  },
-  {
-    "title": "The Dojo Toolkit: Visual QuickStart Guide",
-    "isbn": "0321605128",
-    "id": "0.14018714474514127",
-    "_id": "546a11f514969c2000d004d8"
-  },
-  {
-    "title": "Mastering Dojo: JavaScript and Ajax Tools for Great Web Experiences",
-    "isbn": "1934356115",
-    "id": "0.05179466865956783",
-    "_id": "546a11f514969c2000d004d9"
-  }
+    {
+        "title": "Dojo: The Definitive Guide",
+        "isbn": "0596516487",
+        "id": "book1",
+        "_id": "53a403a0f7d5e421008bd40e"
+    },
+    {
+        "title": "Dojo: Using Dojo JavaScript Library to Build Ajax Applications",
+        "isbn": "0132358042",
+        "id": "book2",
+        "_id": "53a403adf7d5e421008bd40f"
+    },
+    {
+        "title": "Practical Dojo Projects (Expert's Voice in Web Development)",
+        "isbn": "1430210664",
+        "id": "0.9461482693441212",
+        "_id": "546a11e714969c2000d004d7"
+    },
+    {
+        "title": "The Dojo Toolkit: Visual QuickStart Guide",
+        "isbn": "0321605128",
+        "id": "0.14018714474514127",
+        "_id": "546a11f514969c2000d004d8"
+    },
+    {
+        "title": "Mastering Dojo: JavaScript and Ajax Tools for Great Web Experiences",
+        "isbn": "1934356115",
+        "id": "0.05179466865956783",
+        "_id": "546a11f514969c2000d004d9"
+    }
 ]
