@@ -4,6 +4,8 @@ var Server = mongo.Server,
 	ObjectID = mongo.ObjectID,
 	MongoClient = mongo.MongoClient;
 
+var resetData = require("../data.json");
+
 console.log("MONGO CREDENTIALS", process.mongo_creds);
 
 var db;
@@ -17,6 +19,25 @@ exports.findAll = function(req, res, next) {
 			res.send(items);
 		});
 	});
+};
+
+exports.reset = function(req, res, next) {
+    console.log("resetting...");
+	db.collection('books', function(err, collection) {
+        collection.remove({})
+        resetData.forEach(function(book){        	        
+            collection.insert(book, {safe:true}, function(err, result) {
+                if (err) {
+                    res.send({'error':'An error has occurred'});
+                } else {
+                    console.log('Success: ' + JSON.stringify(result));
+                    res.status(201).send(book);
+                }
+            });
+        });
+  	});
+    
+   
 };
 
 
@@ -63,7 +84,7 @@ exports.delete = function(req, res, next) {
     console.log('Deleting book: ' + id);
     db.collection('books', function(err, collection) {
         collection.findOne({id : id}, function(err, book) {
-			collection.remove({'id': id}, {safe:true}, function(err, result) {
+			collection.remove({id: id}, {safe:true}, function(err, result) {
 				if (err) {
 					res.send({'error':'An error has occurred - ' + err});
 				} else {

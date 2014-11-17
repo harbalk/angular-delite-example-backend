@@ -46,7 +46,7 @@ var appInfo = JSON.parse(process.env.VCAP_APPLICATION || "{}");
 // the document or sample of each service.
 var services = JSON.parse(process.env.VCAP_SERVICES || "{}");
 try {
-	process.mongo_creds = services["mongodb-2.2"][0]["credentials"];
+	process.mongo_creds = services["mongodb-2.4"][0]["credentials"];
 } catch(e) {
 	process.mongo_creds = {
 		host: "localhost",
@@ -56,7 +56,7 @@ try {
 }
 
 var books = require("./controllers/Book.js")
-
+app.get('/reset', books.reset);
 app.get('/book', books.findAll);
 app.post('/book', books.add);
 //app.get('/book/:id', books.findById);
