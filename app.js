@@ -39,7 +39,7 @@ try {
 
 var books = require("./controllers/Book.js")
 app.get('/reset', books.reset);
-app.get('/book', books.findAll);
+app.get('/book', books.find);
 app.post('/book', books.add);
 app.put('/book/:id', books.update);
 app.delete('/book/:id', books.delete);
