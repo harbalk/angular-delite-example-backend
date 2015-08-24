@@ -13,21 +13,11 @@ MongoClient.connect(process.mongo_creds.url, function (err, _db) {
 });
 
 exports.findAll = function (req, res, next) {
-    if (req.query.start == null && req.query.length == null) {
-        db.collection("books", function (err, collection) {
-            collection.find().toArray(function (err, items) {
-                console.log(items);
-                res.send(items);
-            });
+    db.collection("books", function (err, collection) {
+        collection.find().toArray(function (err, items) {
+            res.send(items);
         });
-    } else {
-        db.collection("books", function (err, collection) {
-            collection.find().limit(parseInt(req.query.length)).skip(parseInt(req.query.start)).toArray(function (err, items) {
-                console.log(items);
-                res.send(items);
-            });
-        });
-    }
+    });
 };
 
 exports.reset = function (req, res, next) {
